@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let [coffeeImage, setCoffeeImage] = useState("");
+
+  useEffect(() => {
+    fetch("https://coffee.alexflipnote.dev/random.json")
+      .then((response) => response.json())
+      // 4. Setting *dogImage* to the image url that we received from the response above
+      .then((data) => setCoffeeImage(data.message));
+  }, []);
+  console.log(coffeeImage);
+  return <div className="App">{<img src={coffeeImage}></img>}</div>;
 }
 
 export default App;
