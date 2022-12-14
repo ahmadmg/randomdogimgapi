@@ -40,4 +40,11 @@
 .dog-image {
   width: 350px;
   height: 350px;
+  border-radius: 8px;
+}
+.dog-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

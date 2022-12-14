@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
@@ -16,4 +19,9 @@ code {
   justify-content: center;
   align-items: center;
   margin-top: 10%;
+  color: aliceblue;
+  background-color: gray;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 8px;
 }

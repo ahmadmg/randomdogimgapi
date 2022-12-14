@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-
+function refreshPage() {
+  window.location.reload(false);
+}
 function App() {
   let [dogImage, setDogImage] = useState(null);
   let [fileSize, setfileSize] = useState(0);
@@ -13,9 +15,10 @@ function App() {
       });
   }, []);
   return (
-    <div>
-      <img src={dogImage} className="dog-image" />
-      <h2>The File Size is : {fileSize} Bytes </h2>
+    <div className="dog-div">
+      <img src={dogImage} className="dog-image" alt="Dog Image" />
+      <h2>File Size is : {fileSize} Bytes </h2>
+      <button onClick={refreshPage}>Reload!</button>
     </div>
   );
 }
