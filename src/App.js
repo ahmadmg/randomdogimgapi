@@ -2,16 +2,18 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  let [coffeeImage, setCoffeeImage] = useState("");
+  let [dogImage, setDogImage] = useState(null);
 
   useEffect(() => {
-    fetch("https://coffee.alexflipnote.dev/random.json")
+    fetch("https://random.dog/woof.json")
       .then((response) => response.json())
-      // 4. Setting *dogImage* to the image url that we received from the response above
-      .then((data) => setCoffeeImage(data.message));
+      .then((result) => setDogImage(result.url));
   }, []);
-  console.log(coffeeImage);
-  return <div className="App">{<img src={coffeeImage}></img>}</div>;
+  return (
+    <div>
+      <img src={dogImage} />
+    </div>
+  );
 }
 
 export default App;
