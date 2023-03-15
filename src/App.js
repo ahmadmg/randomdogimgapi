@@ -5,6 +5,7 @@ function refreshPage() {
 }
 function App() {
 //   Just basic Api app as a task 
+//   Trainning
   
   let [dogImage, setDogImage] = useState(null);
   let [fileSize, setfileSize] = useState(0);
