@@ -4,6 +4,7 @@ function refreshPage() {
   window.location.reload(false);
 }
 function App() {
+//   Just basic Api app
   let [dogImage, setDogImage] = useState(null);
   let [fileSize, setfileSize] = useState(0);
   useEffect(() => {
