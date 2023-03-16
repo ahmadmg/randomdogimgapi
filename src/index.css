@@ -8,12 +8,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+   background-color: antiquewhite;
 }
 
 
 #root {
+  min-width: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
