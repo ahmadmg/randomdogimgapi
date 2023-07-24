@@ -40,5 +40,16 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
+  },
+  "description": "[Git Pages Link](https://ahmadmg.github.io/randomdogimgapi/)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadmg/randomdogimgapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadmg/randomdogimgapi/issues"
   }
 }
